@@ -83,6 +83,45 @@ Use AWS Lambda's testing features to invoke each function and ensure they perfor
 Remember to handle any additional configurations or permissions that AWS Lambda may require based on your specific use case.
 
 
+## Finding Traces in Jaeger
+
+After deploying the functions to AWS Lambda, you can now trace their execution using Jaeger. Follow these steps:
+
+### Package and Deploy to AWS Lambda:
+
+Follow the AWS Lambda documentation to package and deploy each function. 
+
+### Set Environment Variables:
+
+In AWS Lambda, ensure you have set the environment variables ALPACA_API_KEY and ALPACA_SECRET_KEY for each function.
+
+### Testing the Functions:
+
+Use AWS Lambda's testing features to invoke each function. Ensure they perform as expected.Viewing Traces in Jaeger:
+
+Jaeger traces can be viewed in the Jaeger UI, which provides a detailed overview of the distributed tracing data.
+
+### Access Jaeger UI:
+
+Open a web browser and navigate to the Jaeger UI.
+
+### Search for Traces:
+
+In the Jaeger UI, enter the relevant service name (e.g., SellStock, AddToCartService, etc.) in the search bar.
+
+Select the desired service from the dropdown.
+
+### View Traces:
+
+You will now see a list of traces related to the selected service.
+
+Click on a trace to view detailed information about the execution flow, including the duration, spans, and any logs or tags associated with each span.
+
+### Analyze Traces:
+
+Analyze the traces to identify any performance bottlenecks, errors, or areas for optimization in your functions.
+
+
 
 
 
